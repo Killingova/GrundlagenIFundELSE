@@ -34,6 +34,7 @@
             CmdRechnen = new Button();
             CmdErgebnis = new Button();
             NumEingabe = new NumericUpDown();
+            CmdDemo = new Button();
             ((System.ComponentModel.ISupportInitialize)NumEingabe).BeginInit();
             SuspendLayout();
             // 
@@ -97,11 +98,22 @@
             NumEingabe.TabIndex = 5;
             NumEingabe.ValueChanged += NumEingabe_ValueChanged;
             // 
+            // CmdDemo
+            // 
+            CmdDemo.Location = new Point(47, 398);
+            CmdDemo.Name = "CmdDemo";
+            CmdDemo.Size = new Size(297, 27);
+            CmdDemo.TabIndex = 6;
+            CmdDemo.Text = "Demo";
+            CmdDemo.UseVisualStyleBackColor = true;
+            CmdDemo.Click += CmdDemo_Click;
+            // 
             // IFundElse
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(CmdDemo);
             Controls.Add(NumEingabe);
             Controls.Add(CmdErgebnis);
             Controls.Add(CmdRechnen);
@@ -124,5 +136,6 @@
         private Button CmdRechnen;
         private Button CmdErgebnis;
         private NumericUpDown NumEingabe;
+        private Button CmdDemo;
     }
 }

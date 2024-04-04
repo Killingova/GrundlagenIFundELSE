@@ -5,6 +5,7 @@ namespace GrundlagenIFundELSE
 {
     public partial class IFundElse : Form
     {
+        private readonly Random r = new Random();
         public IFundElse()
         {
             InitializeComponent();
@@ -50,7 +51,7 @@ namespace GrundlagenIFundELSE
                 {
                     // Wenn der Wert kleiner oder gleich 100 ist, zeige eine andere Nachricht.
                     LblAnzeige.Text = "Der Wert ist 100 oder weniger.";
-                    LblAnzeige.ForeColor= Color.Blue;
+                    LblAnzeige.ForeColor = Color.Blue;
                 }
             }
             else
@@ -85,6 +86,20 @@ namespace GrundlagenIFundELSE
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void CmdDemo_Click(object sender, EventArgs e)
+        {
+            int x = r.Next(5, 46); // Generiert eine Zufallszahl zwischen 7 und 12.
+            LblAnzeige.ForeColor = Color.Blue; // Setzt die Textfarbe des Labels auf Schwarz.
+            LblAnzeige.Text = "Wert: " + x; // Zeigt den Wert im Label an.
+
+            // Überprüft, ob der Wert größer als 9 ist.
+            if (x > 9)
+            {
+                LblAnzeige.Text += "\nZweistellig"; // Fügt dem Text eine Zeile hinzu.
+                LblAnzeige.ForeColor = Color.Red; // Ändert die Textfarbe zu Rot.
+            }
         }
     }
 }
